@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookSquare, FaTwitch } from 'react-icons/fa';
+import { FaFacebookSquare, FaTwitch, FaInstagram } from 'react-icons/fa';
 
 const StakeCard = ({ stake: { username, social, eventname, packages } }) => {
 	return (
@@ -63,6 +63,15 @@ const StakeCard = ({ stake: { username, social, eventname, packages } }) => {
 						>
 							<FaTwitch />
 						</a>
+						<a
+							style={{
+								fontSize: '4rem',
+								color: '#000'
+							}}
+							href={social.twitch}
+						>
+							<FaInstagram />
+						</a>
 					</div>
 				</div>
 			</div>
@@ -85,6 +94,7 @@ const StakeCard = ({ stake: { username, social, eventname, packages } }) => {
 							<span>£{pack.price}</span>
 							<button
 								style={{
+									cursor: 'pointer',
 									backgroundColor: '#eee',
 									border: 'none',
 									borderRadius: '2.5rem',
@@ -96,6 +106,21 @@ const StakeCard = ({ stake: { username, social, eventname, packages } }) => {
 						</div>
 					);
 				})}
+
+				<button
+					style={{
+						cursor: 'pointer',
+						width: '100%',
+						backgroundColor: '#eee',
+						border: 'none',
+						fontFamily: 'inherit',
+						fontSize: '1.8rem',
+						padding: '1rem',
+						marginTop: '1rem'
+					}}
+				>
+					more info
+				</button>
 			</div>
 		</div>
 	);

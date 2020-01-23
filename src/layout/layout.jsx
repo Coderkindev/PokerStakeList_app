@@ -8,12 +8,16 @@ const Layout = ({ children }) => {
 		<div
 			style={{
 				width: '100%',
-				minHeight: '100vh'
+				minHeight: '100vh',
+				display: 'flex',
+				flexDirection: 'column'
 			}}
 		>
 			<Navbar />
 			<main
 				style={{
+					flexGrow: '1',
+					width: '100%',
 					maxWidth: '120rem',
 					margin: '0 auto'
 				}}

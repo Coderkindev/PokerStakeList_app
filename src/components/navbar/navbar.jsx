@@ -40,7 +40,7 @@ const Navbar = () => {
 					<li>
 						<a
 							href="https://dreamy-albattani-5b6a08.netlify.com/signin"
-							style={{ color: 'white', textDecoration: 'none', marginRight: '3rem' }}
+							style={{ color: 'white', textDecoration: 'none', marginRight: '2rem' }}
 						>
 							Log in
 						</a>

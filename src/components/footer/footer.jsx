@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer style={{ position: 'absolute', bottom: '0', right: '1rem', color: 'rgba(0,0,0,0.5)' }}>
+		<footer style={{ backgroundColor: '#333', color: '#fff', textAlign: 'center', padding: '2rem' }}>
 			<span>Created by Coderkin</span>
 		</footer>
 	);
