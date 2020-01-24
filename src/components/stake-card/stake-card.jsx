@@ -1,126 +1,62 @@
 import React from 'react';
 import { FaFacebookSquare, FaTwitch, FaInstagram } from 'react-icons/fa';
+import './stake-card.styles.scss';
 
 const StakeCard = ({ stake: { username, social, eventname, packages } }) => {
 	return (
-		<div
-			style={{
-				backgroundColor: '#333',
-				color: '#fff',
-				width: '35rem',
-				margin: '1.5rem 2rem'
-			}}
-		>
-			<div
-				className="header"
-				style={{
-					backgroundColor: '#ccc',
-					color: '#000',
-					padding: '2rem',
-					display: 'flex',
-					justifyContent: 'space-between'
-				}}
-			>
-				<div
-					className="image"
-					style={{
-						backgroundColor: '#333',
-						width: '12rem',
-						height: '12rem',
-						borderRadius: '50%'
-					}}
-				/>
-				<div
-					className="column"
-					style={{
-						width: '50%',
-						display: 'flex',
-						flexDirection: 'column',
-						justifyContent: 'space-between'
-					}}
-				>
-					<div>
-						<p>Name:</p>
-						<span style={{ fontWeight: 'bolder' }}>{username}</span>
-					</div>
-					<div>
-						<p>Social:</p>
-						<a
-							style={{
-								fontSize: '4rem',
-								color: '#000'
-							}}
-							href={social.facebook}
-						>
-							<FaFacebookSquare />
-						</a>
-						<a
-							style={{
-								fontSize: '4rem',
-								color: '#000'
-							}}
-							href={social.twitch}
-						>
-							<FaTwitch />
-						</a>
-						<a
-							style={{
-								fontSize: '4rem',
-								color: '#000'
-							}}
-							href={social.twitch}
-						>
-							<FaInstagram />
-						</a>
+		<div className="card">
+			<div className="card__header">
+				<div className="user-info">
+					<div className="image" />
+					<div className="column">
+						<div>
+							<p>Name:</p>
+							<span className="username">{username}</span>
+						</div>
+						<div>
+							<p>Social:</p>
+							<a className="icon" href={social.facebook}>
+								<FaFacebookSquare />
+							</a>
+							<a className="icon" href={social.twitch}>
+								<FaTwitch />
+							</a>
+							<a className="icon" href={social.twitch}>
+								<FaInstagram />
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div className="body" style={{ padding: '2rem' }}>
-				<h3 style={{ textAlign: 'center', marginBottom: '2rem', fontWeight: 'lighter' }}>{eventname}</h3>
-				{packages.map((pack) => {
-					return (
-						<div
-							key={pack.id}
-							style={{
-								width: '100%',
-								display: 'flex',
-								justifyContent: 'space-between',
-								backgroundColor: '#555',
-								padding: '1rem 2rem',
-								marginBottom: '1rem'
-							}}
-						>
-							<span>{pack.percentage}%</span>
-							<span>£{pack.price}</span>
-							<button
-								style={{
-									cursor: 'pointer',
-									backgroundColor: '#eee',
-									border: 'none',
-									borderRadius: '2.5rem',
-									padding: '0.5rem 1.5rem'
-								}}
-							>
-								Buy
-							</button>
-						</div>
-					);
-				})}
+			<div className="card__body">
+				<div className="event-info">
+					<h3>{eventname}</h3>
+					<h3>Buy-in: £5.800</h3>
 
-				<button
-					style={{
-						cursor: 'pointer',
-						width: '100%',
-						backgroundColor: '#eee',
-						border: 'none',
-						fontFamily: 'inherit',
-						fontSize: '1.8rem',
-						padding: '1rem',
-						marginTop: '1rem'
-					}}
-				>
-					more info
-				</button>
+					<div className="percentage-markdown">
+						<div>
+							<p>85%</p>
+							<span>for sale</span>
+						</div>
+						<div>
+							<p>1.25</p>
+							<span>Markdown</span>
+						</div>
+					</div>
+					<button>more info</button>
+				</div>
+
+				<div className="packages">
+					{packages.map((pack) => {
+						return (
+							<div key={pack.id} className="package">
+								<span>{pack.percentage}%</span>
+								<span>£{pack.price}</span>
+								<button>Buy</button>
+							</div>
+						);
+					})}
+				</div>
 			</div>
 		</div>
 	);

@@ -167,9 +167,9 @@ const Homepage = () => {
 		<Layout>
 			<div
 				style={{
-					display: 'flex',
-					flexWrap: 'wrap',
-					justifyContent: 'space-evenly'
+					// display: 'flex',
+					// flexWrap: 'wrap',
+					// justifyContent: 'space-evenly'
 				}}
 			>
 				{stakeList.map((stake) => <StakeCard key={stake.id} stake={stake} />)}
