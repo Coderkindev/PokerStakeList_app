@@ -7,16 +7,18 @@
 	margin: 3rem 0 5rem;
 
 	&__header {
-		background-color: #555;
+		background-color: #fff;
+		color: #494ca2;
 		padding: 2rem 3rem;
 		align-self: flex-start;
+		border-left: 3px solid #494ca2;
 
 		.user-info {
 			display: flex;
 			flex-wrap: wrap;
 
 			.image {
-				background-color: #333;
+				background-color: #8186d5;
 				width: 12rem;
 				height: 12rem;
 				border-radius: 50%;
@@ -29,7 +31,7 @@
 				justify-content: space-evenly;
 
 				p {
-					color: rgba(255, 255, 255, 0.5);
+					color: rgba(#494ca2, 0.75);
 					font-size: 1.8rem;
 				}
 
@@ -39,7 +41,7 @@
 
 				.icon {
 					font-size: 4rem;
-					color: #fff;
+					color: #494ca2;
 					margin-right: 1.5rem;
 				}
 			}
@@ -47,12 +49,21 @@
 	}
 
 	&__body {
-		background-color: #333;
+		background-color: #fff;
+		color: #494ca2;
 		display: flex;
-		justify-content: space-evenly;
-		padding: 7rem 2rem 5rem;
-		text-align: center;
+		justify-content: space-between;
+		padding: 5rem 3rem 5rem;
 		flex-wrap: wrap;
+		box-shadow: 2px 5px 0.5rem rgba(#494ca2, 0.15);
+		border-left: 3px solid #494ca2;
+
+		&:after {
+			content: ' ';
+			width: inherit;
+			height: inherit;
+			box-shadow: -2px -3px 1rem rgba(#fff, 0.75);
+		}
 
 		h3 {
 			font-size: 3rem;
@@ -68,7 +79,7 @@
 
 				span {
 					font-size: 1.8rem;
-					color: rgba(255, 255, 255, 0.5);
+					color: rgba(#494ca2, 0.8);
 				}
 			}
 
@@ -80,6 +91,9 @@
 				font-family: inherit;
 				font-weight: 900;
 				text-transform: capitalize;
+				border: none;
+				background-color: #494ca2;
+				color: #fff;
 			}
 		}
 
@@ -91,7 +105,7 @@
 			justify-content: space-evenly;
 
 			.package {
-				background-color: #555;
+				background-color: #c6cbef;
 				padding: 2rem;
 
 				span {

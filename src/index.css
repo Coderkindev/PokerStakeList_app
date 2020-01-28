@@ -12,6 +12,7 @@ html {
 
 body {
 	font-size: 1.6rem;
-	background-color: #999;
+	background: linear-gradient(rgba(227, 231, 241, 1), rgba(198, 203, 239, 1));
+
 	font-family: 'Montserrat', sans-serif;
 }
